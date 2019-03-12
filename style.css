@@ -1,0 +1,343 @@
+/***************************
+GENERAL SETTINGS
+***************************/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+    font-size: 75%; /* 12px */
+}
+
+body {
+    box-sizing: border-box;
+    color: #001c47;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 2%;
+    backface-visibility: hidden;
+}
+
+.clearfix {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+li {
+    list-style: none;
+}
+
+.section__title {
+    color:#001c47;
+    display: table;
+    font-size: 3.25rem;
+    font-weight: 400;
+    letter-spacing: .65rem;
+    margin: 7rem auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0,0,0, .3);
+    transition: all .2s;
+
+}
+
+.section__title:after {
+    content: "";
+    background-color: #001c47;
+    display: block;
+    height: 1px;
+    margin: 1.7rem auto;
+    width: 15rem;
+}
+
+.section__title:hover {
+    transform: scale(1.05);
+    text-shadow: 0 2px 5px rgba(0,0,0, .3);
+}
+
+/***************************
+ANIMATION
+***************************/
+
+@keyframes moveInRight {
+  from {left: 90%;
+    width: 200%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes moveInBottom {
+  from {
+    margin-bottom: 90%;
+    width: 200%; 
+  }
+
+  to {
+    margin-bottom: 0%;
+    width: 100%;
+  }
+
+}
+
+/*
+@keyframes rotation {
+    from {
+        transform: rotate(270deg);
+    }
+    
+    to {
+        transform: rotate(0deg);
+    }
+}
+*/
+
+/***************************
+LOGO
+***************************/
+
+.icon {
+    color: rgba(242, 242, 242, .9);
+    font-size: 5rem;
+    position: absolute;
+    top: 2.5%;
+    left: 3.5%;
+    -webkit-animation-name: moveInRight;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+}
+
+
+/***************************
+HEADER
+***************************/
+
+
+.container__header {
+    backface-visibility: hidden;
+    background-image: linear-gradient(to right bottom,
+        rgba(4, 36, 86, .6),
+        rgba(4, 36, 86, .7),
+        rgba(4, 36, 86, .85)),
+        url(img/hero_01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    clip-path:  polygon(0 0, 100% 0, 100% 100%, 0 88vh); /*polygon(0 0, 0 100%, 75vh 100%, 0 100%);*/
+    height: 100vh;
+    position: relative;
+/*    width: 100%;*/
+    overflow: auto;
+ 
+}
+
+.container__title {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#container__title--main,
+#container__title--secondary {
+    text-shadow: 0 4px 7px rgba(0,0,0, .3);
+    line-height: 120%;
+}
+
+.container__title--main {
+    -webkit-animation-name: moveInRight;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    color: #f2f2f2;
+    display: block;
+    font-size: 8rem;
+    font-weight: 400;
+/*    line-height: 110%;*/
+    letter-spacing: 1.7rem;
+    text-transform: uppercase;
+}
+
+.container__title--secondary {
+    -webkit-animation-name: moveInBottom;
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    color: #f2f2f2;
+    display: block;
+    font-size: 3.25rem;
+    font-weight: 400;
+    letter-spacing: .65rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container__title--main, .container__title--secondary, .container__title--btn {
+      text-shadow: 0 2px 4px rgba(0,0,0, .2);
+}
+
+.container__title--btn {
+    border: 1px solid rgba(242,242, 242, .8);
+    border-radius: 12px;
+    color: #f2f2f2;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    margin: 5rem;
+    width: 50%;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s;
+    
+}
+
+.container__title--btn:hover {
+    transform: scale(.96) translateY(2px);
+    background-color: rgba(242,242, 242, .8);
+    border: none;
+    color: #001c47;
+}
+
+
+/***************************
+SECTION PRICES
+***************************/
+
+.section__offer {
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom,
+        rgba(4, 36, 86, .85),
+        rgba(4, 36, 86, .7),
+        rgba(4, 36, 86, .6)),
+        url(img/offer_high_1.jpg);
+    background-size: cover;
+    clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 95vh);
+    height: 100vh;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/***************************
+SECTION PRICES
+***************************/
+
+.section__content {
+
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section__content__row {
+    display: flex;
+    max-width: 110rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section__content__plan {
+    box-shadow: 0 1.5em 4em rgba(0,0,0, .15);
+    border-radius: 3px;
+    display: block;
+    float: left;
+    margin: 0 auto;
+    padding: 3%;
+    width: 30%;
+}
+
+.section__content__plan h3 {
+    text-shadow: 0 1.5px 3px rgba(0,0,0, .15);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section__content__plan p {
+    margin-bottom: 1.5rem;
+}
+
+.section__content__plan-details  {
+    line-height: 4.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+
+.section__content__plan-details li:not(:last-child)  {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+
+
+/***************************
+TESTIMONIALS
+***************************/
+s
+.section__video {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
+    opacity: .15;
+    object-fit: cover;
+    overflow: hidden;
+    height: 95vh;
+    max-width: 100%;
+/*    width: 100%;*/
+    z-index: -1;
+}
+
+
+
+/***************************
+FOOTER
+***************************/
+
+.footer__content {
+    color: #f2f2f2;
+    background-color: #001c47;
+    margin-top: 5rem;
+    padding: 3%;
+    text-transform: uppercase;
+    letter-spacing: .2rem
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
