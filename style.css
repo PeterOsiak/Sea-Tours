@@ -219,9 +219,8 @@ HEADER
     color: #001c47;
 }
 
-
 /***************************
-SECTION PRICES
+SECTION OFFER
 ***************************/
 
 .section__offer {
@@ -236,9 +235,65 @@ SECTION PRICES
     clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 95vh);
     height: 100vh;
     overflow: hidden;
-    max-width: 100%;
-    z-index: -1;
+    position: relative;
+   
 }
+
+.section__offer__row--one {
+    border-radius: 3px;
+    border: 2rem solid #f2f2f2;
+    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+    -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+    display: block;
+    width: 100%;
+    height: 400%;
+    overflow: hidden;
+    position: absolute;
+    top: 0%;
+    left: 00%;
+    transform: translate(-50%, -50%) rotate(12deg);
+    
+}
+
+.section__offer__row--two {
+    background-color: transparent;
+    border-radius: 3px;
+    border-bottom: 2rem solid #f2f2f2;
+    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(19% 5%, 100% 0, 100% 100%, 0 100%);
+    display: block;
+    width: 58%;
+    height: 80%;
+    position: absolute;
+    overflow: hidden;
+    top: 16%;
+    right: 0;
+    transform: translate(0, -50%);
+    
+}
+
+.section__offer__row--three {
+    background-color: rgba(255,255,255,.7);
+    border-radius: 3px;
+    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    display: block;
+    width: 60%;
+    height: 18em;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+/***************************
+SECTION PRICES
+***************************/
+
 
 .section__content {
     background-attachment: fixed;
@@ -249,6 +304,7 @@ SECTION PRICES
     url(img/test_1_high.jpg);
     background-position: center;
     background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 6vh, 100% 94vh, 0 100%);
     clip-path: polygon(0 0, 100% 6vh, 100% 94vh, 0 100%);
     height: 100vh;
     margin: 0 auto;
@@ -257,19 +313,57 @@ SECTION PRICES
     position: relative;
 }
 
-.section__content__plan--header {
+/* Pictures of the plan headers */
+
+.section__content__plan--header1 {
     background-image: linear-gradient(to right bottom,
-        rgba(4, 36, 86, .6),
-        rgba(4, 36, 86, .7),
+        rgba(4, 36, 86, .75),
+        rgba(4, 36, 86, .8),
         rgba(4, 36, 86, .85)),
         url(img/hero_2.jpg);
     background-size: cover;
     background-position: center;
     background-blend-mode: difference;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     color: #f2f2f2;
+    padding: 20%;
     text-shadow: 0 1.5em 4em rgba(0,0,0, .2);
-    padding: 15%;
+   
+}
+
+.section__content__plan--header2 {
+    background-image: linear-gradient(to right bottom,
+        rgba(12, 92, 114, .85),
+        rgba(12, 92, 114, .9),
+        rgba(12, 92, 114, .95)),
+        url(img/price_1_low.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    color: #f2f2f2;
+    padding: 20%;
+    text-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+   
+}
+
+.section__content__plan--header3 {
+    background-image: linear-gradient(to right bottom,
+        rgba(4, 36, 86, .75),
+        rgba(4, 36, 86, .8),
+        rgba(4, 36, 86, .85)),
+        url(img/offer_low_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    color: #f2f2f2;
+    padding: 20%;
+    text-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+   
 }
 
 .section__content__row {
@@ -285,8 +379,9 @@ SECTION PRICES
 
 .section__content__plan {
     background-color: rgba(255,255,255, .85);
-    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+    box-shadow: 0 1.5em 4em rgba(0,0,0, .2); /* variable $*/
     border-radius: 3px;
+    -webkit-clip-path: polygon(0 0, 100% 2%, 100% 99%, 0 100%);
     clip-path: polygon(0 0, 100% 2%, 100% 99%, 0 100%);
     display: block;
     float: left;
@@ -296,13 +391,15 @@ SECTION PRICES
 }
 
 #section__content__plan--standard {
+    -webkit-clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0 99%);
     clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0 99%);
 }
 
 .section__content__plan h3 {
-    text-shadow: 0 1.5px 3px rgba(0,0,0, .15);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    text-shadow: 0 1.5px 4em rgba(0,0,0, .3);
+    font-size: 3.5rem;
+    font-weight: 400;
+/*    margin-bottom: 1.5rem;*/
     text-transform: uppercase;
     text-align: center;
 }
@@ -314,7 +411,7 @@ SECTION PRICES
 .section__content__plan-details  {
     line-height: 4.5rem;
     font-weight: 400;
-    padding: 2%;
+    padding: 4%;
     text-align: center;
     text-transform: uppercase;
     
@@ -336,10 +433,12 @@ TESTIMONIALS
     rgba(4, 36, 86, .85));
     background-position: center;
     background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
 }
 
 .section__video {
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
     opacity: .15;
     object-fit: cover;
@@ -361,6 +460,7 @@ footer {
     rgba(4, 36, 86, .9),
     rgba(4, 36, 86, .8),
     rgba(4, 36, 86, .7));
+    -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100% );
     clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100% );
 }
 
