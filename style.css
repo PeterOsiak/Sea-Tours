@@ -24,7 +24,7 @@ body {
     backface-visibility: hidden;
 }
 
-.container {
+.container__body {
     background-color: #f9fbff;
 }
 
@@ -213,10 +213,12 @@ HEADER
 }
 
 .container__title--btn:hover {
-    transform: scale(.96) translateY(2px);
+    
     background-color: rgba(242,242, 242, .8);
     border: none;
     color: #001c47;
+    text-decoration: none;
+    transform: scale(.96) translateY(2px);
 }
 
 /***************************
@@ -239,55 +241,55 @@ SECTION OFFER
    
 }
 
-.section__offer__row--one {
-    border-radius: 3px;
-    border: 2rem solid #f2f2f2;
-    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
-    -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
-    display: block;
-    width: 100%;
-    height: 400%;
-    overflow: hidden;
+/*
+.section__offer__row [class^="section__offer__row--"]:not(:last-child) {
+    margin-right: 5%;
+    
+}
+*/
+
+.section__offer__row {
+    box-sizing: border-box;
     position: absolute;
-    top: 0%;
-    left: 00%;
-    transform: translate(-50%, -50%) rotate(12deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.section__offer__row--one {
+    float: left;
+    border-right: 2rem solid #f9fbff;
+    height: 60rem;
+    width: 25%;
+/*
+    -webkit-clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+*/
     
 }
 
 .section__offer__row--two {
-    background-color: transparent;
-    border-radius: 3px;
-    border-bottom: 2rem solid #f2f2f2;
-    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
-    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-    clip-path: polygon(19% 5%, 100% 0, 100% 100%, 0 100%);
-    display: block;
-    width: 58%;
-    height: 80%;
-    position: absolute;
-    overflow: hidden;
-    top: 16%;
-    right: 0;
-    transform: translate(0, -50%);
-    
+    float: left;
+    height: 60rem;
+    border-right: 2rem solid #f9fbff; 
+    width: 35%;
+/*
+ 
+    -webkit-clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+*/
 }
 
 .section__offer__row--three {
-    background-color: rgba(255,255,255,.7);
-    border-radius: 3px;
-    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+    float: left;
+    height: 61rem;
+    width: 40%;
+/*
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-    display: block;
-    width: 60%;
-    height: 18em;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+*/
+   
 }
 
 /***************************
