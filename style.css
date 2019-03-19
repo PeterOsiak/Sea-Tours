@@ -55,6 +55,7 @@ a {
     transition: all .2s;
 }
 
+/*
 .section__title:after {
     content: "";
     background-color: #001c47;
@@ -63,6 +64,7 @@ a {
     margin: 1.7rem auto;
     width: 15rem;
 }
+*/
 
 .section__title:hover {
     transform: scale(1.05);
@@ -84,6 +86,52 @@ a {
     text-shadow: 0 1.5px 4em rgba(0,0,0, .3);
     font-weight: 400;
     text-transform: uppercase;
+}
+
+/* BUTTONS */
+
+.section__btn {
+    border: 1px solid rgba(4, 36, 86, .9);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0, .2);
+    color: rgba(4, 36, 86);
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .65rem;
+    margin: 3rem auto 0 auto;
+    width: 30%;
+    padding: 1rem 2rem;
+    transform: rotate(1.4deg);
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0,0,0, .2);
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.section__btn:hover {
+    
+    background-color: rgba(4, 36, 86, .9);
+    border: 1px solid rgb(249, 251, 255);
+    box-shadow: 0 1px 3px rgba(0,0,0, .3);
+    color: #f9fbff;
+    text-decoration: none;
+    transform: scale(.96) translateY(2px);
+}
+
+/* after AFTER button of the section */ 
+
+.row:after {
+    background-color: rgba(4, 36, 86, .75);
+    box-shadow: 0 2px 4px rgba(0,0,0, .2);
+    content: "";
+    display: block;
+    width: 71%;
+    height: .2rem;
+    border-radius: 5px;
+    margin: 5rem auto 0 auto;
+    transform: rotate(1.4deg);
 }
 
 /***************************
@@ -154,6 +202,25 @@ LOGO
 HEADER
 ***************************/
 
+.container__header:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: linear-gradient(to right bottom,
+        rgba(4, 36, 86, .6),
+        rgba(4, 36, 86, .7),
+        rgba(4, 36, 86, .9)),
+        url(img/hero_1.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .container__header {
     backface-visibility: hidden;
@@ -164,6 +231,9 @@ HEADER
         url(img/hero_1.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
     clip-path:  polygon(0 0, 100% 0, 100% 100%, 0 88vh); /*polygon(0 0, 0 100%, 75vh 100%, 0 100%);*/
@@ -244,7 +314,7 @@ HEADER
 .container__title--btn:hover {
     
     background-color: rgba(242,242, 242, .8);
-    border: none;
+    border: 1px solid rgba(242,242, 242, .8);
     color: #001c47;
     text-decoration: none;
     transform: scale(.96) translateY(2px);
@@ -270,7 +340,7 @@ SECTION OUR OFFER
 }
 
 .section__offer__border {
-    background-color: rgb(242, 242, 242, .7);
+    background-color: rgba(242, 242, 242,.85);
     box-shadow: 0 1.5em 4em rgba(0,0,0, .2); 
     clip-path: polygon(0 0, 100% 5%, 100% 97%, 0 100%);
     position: absolute;
@@ -278,7 +348,7 @@ SECTION OUR OFFER
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    height: 40%;
+    height: 50%;
 }
 
 .section__offer__row {
@@ -295,7 +365,7 @@ SECTION OUR OFFER
 .section__offer__row--one {
     float: left;
     border-right: 2rem solid #f9fbff;
-    height: 60rem;
+    height: 100vh;
     position: relative;
     width: 25%;
     transition: all .2s;
@@ -313,7 +383,7 @@ SECTION OUR OFFER
 
 .section__offer__row--two {
     float: left;
-    height: 60rem;
+    height: 100vh;
     border-right: 2rem solid #f9fbff; 
     position: relative;
     width: 35%;
@@ -331,7 +401,7 @@ SECTION OUR OFFER
 
 .section__offer__row--three {
     float: left;
-    height: 61rem;
+    height: 100vh;
     position: relative;
     width: 40%;
    
@@ -344,6 +414,21 @@ SECTION OUR OFFER
     transform: translate(-50%, -50%);
     text-transform: uppercase;
 }
+
+/* Icons */
+
+.ion-ios-body,
+.ion-md-globe,
+.ion-ios-eye {
+    color: rgba(4, 36, 86, .8);
+    font-size: 10rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+    
+
 
 /***************************
 SECTION PRICES
@@ -440,7 +525,6 @@ SECTION PRICES
     display: block;
     float: left;
     margin: 0 auto;
-/*    padding: 3%;*/
     width: 30%;
 }
 
@@ -472,7 +556,9 @@ SECTION PRICES
 TESTIMONIALS
 ***************************/
 
-.video {
+/* videos */
+
+.section__clients {
     background: linear-gradient(to left bottom,
     rgba(4, 36, 86, .95),
     rgba(4, 36, 86, .90),
@@ -480,21 +566,60 @@ TESTIMONIALS
     background-position: center;
     background-size: cover;
     -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    height: 100vh;
+    position: relative;
+    padding: 15rem 0;
 }
 
 .section__video {
-    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
-    opacity: .15;
-    object-fit: cover;
-    overflow: hidden;
-    height: 95vh;
-    max-width: 100%;
-/*    width: 100%;*/
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
     z-index: -1;
+    opacity: .15;
+    overflow: hidden;
 }
 
+.section__video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section__row {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.section__row:not(:last-child) {
+    margin-bottom: 0;
+}
+
+/* testimonials */
+
+.section__row--upper,
+.section__row--lower {
+    margin: 0 auto;
+    max-width: 100%; /** 1200px */
+    margin-bottom: 4rem;
+}
+
+.section__stories {
+    -webkit- box-shadow: 0 1.5em 4em rgba(0,0,0, .1); 
+    box-shadow: 0 1.5em 4em rgba(0,0,0, .1); 
+    background-color: rgba(255,255,255, .7);
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 5rem;
+    transform: skewX(-12deg);
+    width: 75%;
+}
 
 
 /***************************
@@ -507,7 +632,7 @@ footer {
     rgba(4, 36, 86, .8),
     rgba(4, 36, 86, .7));
     -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100% );
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100% );
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100% );
 }
 
 .footer__content {
