@@ -5,9 +5,9 @@ GENERAL SETTINGS
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; 
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
@@ -124,7 +124,6 @@ a {
 
 .row:after {
     background-color: rgba(4, 36, 86, .75);
-    box-shadow: 0 2px 4px rgba(0,0,0, .2);
     content: "";
     display: block;
     width: 71%;
@@ -341,14 +340,15 @@ SECTION OUR OFFER
 
 .section__offer__border {
     background-color: rgba(242, 242, 242,.85);
-    box-shadow: 0 1.5em 4em rgba(0,0,0, .2); 
+    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
     clip-path: polygon(0 0, 100% 5%, 100% 97%, 0 100%);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    height: 50%;
+    /* height: auto; */
+    margin: 0 auto;
 }
 
 .section__offer__row {
@@ -372,11 +372,16 @@ SECTION OUR OFFER
 }
 
 .section__offer--basic {
+/*
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+*/
+    margin: 0 auto 3rem auto;
+    padding: 0 2rem;
     text-transform: uppercase;
+    width: 100%;
 }
 
 /* MIDDLE COLUMN */
@@ -390,11 +395,17 @@ SECTION OUR OFFER
 }
 
 .section__offer--standard {
+/*
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
+*/
+    margin: 0 auto 6rem auto;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    width: 100%;
 }
 
 /* RIGHT COLUMN */
@@ -408,11 +419,17 @@ SECTION OUR OFFER
 }
 
 .section__offer--premium {
+/*
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
+*/
+    margin: 0 auto 6rem auto;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    width: 100%;
 }
 
 /* Icons */
@@ -420,12 +437,20 @@ SECTION OUR OFFER
 .ion-ios-body,
 .ion-md-globe,
 .ion-ios-eye {
+/*
     color: rgba(4, 36, 86, .8);
     font-size: 10rem;
     display: inline-block;
     text-align: center;
     width: 100%;
     margin: 0 auto;
+*/
+    color: rgba(4, 36, 86, .8);
+    font-size: 10rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto 0 auto;
 }
     
 
@@ -556,7 +581,7 @@ SECTION PRICES
 TESTIMONIALS
 ***************************/
 
-/* videos */
+/* video background */
 
 .section__clients {
     background: linear-gradient(to left bottom,
@@ -567,7 +592,7 @@ TESTIMONIALS
     background-size: cover;
     -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-    height: 100vh;
+/*    height: 100vh;*/
     position: relative;
     padding: 15rem 0;
 }
@@ -590,15 +615,12 @@ TESTIMONIALS
 }
 
 .section__row {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+    max-width: 100rem;
+    margin: 0 auto;
 }
 
 .section__row:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: 4rem;
 }
 
 /* testimonials */
@@ -606,9 +628,38 @@ TESTIMONIALS
 .section__row--upper,
 .section__row--lower {
     margin: 0 auto;
-    max-width: 100%; /** 1200px */
+    max-width: 100%; /* 1200px */
     margin-bottom: 4rem;
 }
+
+
+/*
+
+.section__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+}
+
+.section__img {
+    height: 100%;
+    -webkit-transform: translateX(-4rem) scale(1.4);
+    transform: translateX(-4rem) scale(1.4);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+*/
 
 .section__stories {
     -webkit- box-shadow: 0 1.5em 4em rgba(0,0,0, .1); 
@@ -621,6 +672,10 @@ TESTIMONIALS
     width: 75%;
 }
 
+.section__stories p {
+    margin: 0 auto;
+    transform: skewX(12deg);
+}
 
 /***************************
 FOOTER
@@ -690,7 +745,6 @@ footer {
 .footer__item,
 .footer__item i {
     display: inline-block;
-/*    margin-right: 1.5rem;*/
 }
 
 .footer__item i {
