@@ -192,35 +192,12 @@ LOGO
 .ion-ios-boat {
     color: rgba(242, 242, 242, .9);
     font-size: 7rem;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
-
-
 
 /***************************
 HEADER
 ***************************/
-
-.container__header:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background-image: linear-gradient(to right bottom,
-        rgba(4, 36, 86, .6),
-        rgba(4, 36, 86, .7),
-        rgba(4, 36, 86, .9)),
-        url(img/hero_1.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 .container__header {
     backface-visibility: hidden;
@@ -241,7 +218,6 @@ HEADER
     position: relative;
 /*    width: 100%;*/
     overflow: auto;
- 
 }
 
 .container__title {
@@ -665,7 +641,7 @@ TESTIMONIALS
 }
 
 .section__img {
-    height: 100%;
+    height: 110%;
     -webkit-transform: translateX(-4rem) scale(1.4);
     transform: translateX(-1rem) scale(1.4);
     -webkit-backface-visibility: hidden;
