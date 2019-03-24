@@ -51,7 +51,7 @@ a {
     margin: 7rem auto;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 0 1px 2px rgba(0,0,0, .3);
+    text-shadow: 0 1px 2px rgba(0,0,0, .1);
     transition: all .2s;
 }
 
@@ -74,11 +74,12 @@ a {
 /* HEADERS */
 
 .section__header--h3 {
-    text-shadow: 0 1.5px 4em rgba(0,0,0, .3);
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 400;
+    margin: 0 auto;
     text-transform: uppercase;
     text-align: center;
+    text-shadow: 0 1.5px 3px rgba(0,0,0, .1);
 }
 
 
@@ -121,6 +122,24 @@ a {
     transform: scale(.96) translateY(2px);
 }
 
+.section__btn--small {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 3rem auto;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section__btn--small:after {
+    background-color: rgba(4, 36, 86, .75);
+    content: "";
+    display: block;
+    height: .1rem;
+    margin: .5rem auto;
+    width: 30%;
+}
+
 /* after AFTER button of the section */ 
 
 .row:after {
@@ -161,18 +180,6 @@ ANIMATION
   }
 
 }
-
-/*
-@keyframes rotation {
-    from {
-        transform: rotate(270deg);
-    }
-    
-    to {
-        transform: rotate(0deg);
-    }
-}
-*/
 
 /***************************
 LOGO
@@ -309,112 +316,217 @@ SECTION OUR OFFER
         url(img/offer_high_2.jpg);
     background-position: center;
     background-size: cover;
-    clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 95vh);
+    -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 98%);
+    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 98%);
     height: 100vh;
-    overflow: hidden;
+    position: relative;
+    padding: 20rem 0;
 }
 
 .section__offer__row {
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 
-.section__offer__border {
+.section__offer--border1,
+.section__offer--border2,
+.section__offer--border3 {
+    box-sizing: border-box;
+    float: left;
+    margin: 2%;
+    width: 29.3333333%;
+/*    border: 2rem solid black;*/
+/*    padding: 25rem 0;*/
+}
+
+.section__offer__plan--1,
+.section__offer__plan--2,
+.section__offer__plan--3{
     background-color: rgba(242, 242, 242,.85);
-    box-shadow: 0 1.5em 4em rgba(0,0,0, .2);
+    border-radius: 3px;
     clip-path: polygon(0 0, 100% 5%, 100% 97%, 0 100%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    margin: 0 auto;
+    height: auto;
+    padding: 1rem 3em;
+    width: 100%;
     transition: all .3s;
 }
 
+/* Section's effects */
 
-
-/* LEFT COLUMN */
-
-.section__offer__row--one {
-    float: left;
-    border-right: 2rem solid #f9fbff;
-    height: 100vh;
-    position: relative;
-    width: 25%;
+.section__offer__plan--1:hover {
+    background: linear-gradient(to right bottom, 
+        rgba(242, 158, 24, .75),
+        rgba(242, 158, 24, .8), 
+        rgba(242, 158, 24, .85)), 
+        url(img/border_1_low.jpg);
+    border-left: 2rem solid rgba(242, 242, 242, .7);
+    border-right: 2rem solid rgba(242, 242, 242, .7);
+    background-blend-mode: color;
+    background-position: center;
+    background-size: cover;
 }
 
-.section__offer--basic {
-    margin: 0 auto 3rem auto;
-    padding: 0 2rem;
-    text-transform: uppercase;
-    width: 90%;
+.section__offer__plan--2:hover {
+    background: linear-gradient(to right bottom,
+        rgba(12, 92, 114, .75),
+        rgba(12, 92, 114, .8), 
+        rgba(12, 92, 114, .85)), 
+        url(img/border_2_low.jpg);
+    border-left: 2rem solid rgba(242, 242, 242, .7);
+    border-right: 2rem solid rgba(242, 242, 242, .7);
+    background-blend-mode: color;
+    background-position: center;
+    background-size: cover;
 }
 
-/* MIDDLE COLUMN */
-
-.section__offer__row--two {
-    float: left;
-    height: 100vh;
-    border-right: 2rem solid #f9fbff; 
-    position: relative;
-    width: 35%;
+.section__offer__plan--3:hover {
+    background: linear-gradient(to right bottom, 
+        rgba(249, 104, 126, .75),
+        rgba(249, 104, 126, .85), 
+        rgba(249, 104, 126, .95)), 
+        url(img/border_3_low.jpg);
+    border-left: 2rem solid rgba(242, 242, 242, .7);
+    border-right: 2rem solid rgba(242, 242, 242, .7);
+    box-sizing: border-box;
+    background-blend-mode: color;
+    background-position: center;
+    background-size: 110% 110%;
 }
 
-.section__offer--standard {
-    margin: 0 auto 6rem auto;
-    padding: 0 2rem;
-    text-transform: uppercase;
-    width: 90%;
+/* Effects on icons */
+.section__offer__plan--1:hover .icon,
+.section__offer__plan--2:hover .icon,
+.section__offer__plan--3:hover .icon{
+    color: rgb(242, 242, 242);
+    transform: scale(.8);
 }
 
-/* RIGHT COLUMN */
+/* Effects on header and text*/
 
-.section__offer__row--three {
-    float: left;
-    height: 100vh;
-    position: relative;
-    width: 40%;
-   
-}
-
-.section__offer--premium {
 /*
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-*/
-    margin: 0 auto 6rem auto;
-    padding: 0 2rem;
-    text-transform: uppercase;
-    width: 90%;
+.section__offer__plan--1:hover .section__header,
+.section__offer__plan--1:hover .section__offer--details,
+.section__offer__plan--2:hover .section__header,
+.section__offer__plan--2:hover .section__offer--details,
+.section__offer__plan--3:hover .section__header,
+.section__offer__plan--3:hover .section__offer--details {
+    color: rgb(242, 242, 242);
+    text-shadow: 0 2px 4px rgba(0,0,0,.2);
 }
+*/
+
+.section__offer__plan--1:hover .section__header--h3,
+.section__offer__plan--2:hover .section__header--h3,
+.section__offer__plan--3:hover .section__header--h3 {
+    color: rgb(242, 242, 242);
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.section__offer__plan--1:hover .section__offer--details,
+.section__offer__plan--2:hover .section__offer--details,
+.section__offer__plan--3:hover .section__offer--details {
+    color: rgb(242, 242, 242);
+    display: block;
+}
+
+/* Effects on btn--small*/
+.section__offer__plan--1:hover .section__btn--small,
+.section__offer__plan--2:hover .section__btn--small,
+.section__offer__plan--3:hover .section__btn--small {
+    display: none;
+}
+
+/* plan 1 */
+
+.section__offer__plan--1:hover .section__offer--details {
+    background: linear-gradient(to left, 
+        rgba(242, 158, 24, .8),
+        rgba(242, 158, 24, .85), 
+        rgba(242, 158, 24, .95));
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    padding: .5rem .8rem;
+}
+
+.section__offer__plan--1:hover .section__header {
+    background: linear-gradient(to bottom, 
+        rgba(242, 158, 24, 1),
+        rgba(242, 158, 24, .85), 
+        rgba(242, 158, 24, .9));
+    display: inline-block;
+    padding: .5rem .8rem;
+}
+
+/* plan 2 */
+
+.section__offer__plan--2:hover .section__offer--details {
+    background: linear-gradient(to left,
+        rgba(12, 92, 114, .75),
+        rgba(12, 92, 114, .8), 
+        rgba(12, 92, 114, .85));
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    padding: .5rem .8rem;
+}
+
+.section__offer__plan--2:hover .section__header {
+    background: linear-gradient(to right,
+        rgba(12, 92, 114, 1),
+        rgba(12, 92, 114, .8), 
+        rgba(12, 92, 114, .9));
+    display: inline-block;
+    padding: .5rem .8rem;
+}
+
+/* plan 3 */
+
+.section__offer__plan--3:hover .section__offer--details {
+    background: linear-gradient(to left, 
+        rgba(249, 104, 126, .75),
+        rgba(249, 104, 126, .85), 
+        rgba(249, 104, 126, .95));
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    padding: .5rem .8rem;
+}
+
+.section__offer__plan--3:hover .section__header {
+    background: linear-gradient(to right, 
+        rgba(249, 104, 126, 1),
+        rgba(249, 104, 126, .85), 
+        rgba(249, 104, 126, .9));
+    display: inline-block;
+    padding: .5rem .8rem;
+}
+
+.section__offer__plan--1:hover .section__header--h4 {
+    margin: 0;
+}
+
+.section__header {
+    margin-bottom: 3rem;
+}
+
+.section__offer--details {
+    margin-bottom: 3rem;
+    display: none;
+}
+
+/* END OF Section effects */
+
 
 /* Icons */
 
 .ion-ios-body,
 .ion-md-globe,
 .ion-ios-eye {
-/*
-    color: rgba(4, 36, 86, .8);
-    font-size: 10rem;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-*/
     color: rgba(4, 36, 86, .8);
     font-size: 10rem;
     display: inline-block;
     text-align: center;
     width: 100%;
     margin: 1rem auto 0 auto;
+    transition: all .3s;
 }
     
-
-
 /***************************
 SECTION PRICES
 ***************************/
@@ -614,15 +726,7 @@ TESTIMONIALS
     -webkit-filter: blur(3px) brightness(80%);
     filter: blur(3px) brightness(80%);
 }
-/*
 
-.section__row--lower:hover .section__img {
-    -webkit-transform: translateX(1.5rem) scale(1);
-    transform: translateX(-.5rem) scale(1);
-    -webkit-filter: blur(3px) brightness(80%);
-    filter: blur(3px) brightness(80%);
-}
-*/
 
 
 .section__shape {
